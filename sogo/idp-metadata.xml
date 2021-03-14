@@ -1,0 +1,43 @@
+<md:EntitiesDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
+xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Name="urn:keycloak">
+  <md:EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
+  xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+  xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+  xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+  entityID="http://localhost:9090/keycloak/auth/realms/test">
+    <md:IDPSSODescriptor WantAuthnRequestsSigned="true"
+    protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+
+      <md:KeyDescriptor use="signing">
+        <ds:KeyInfo>
+          <ds:KeyName>
+          ZaXG43v6K-2g2ylG3wPJSZeoBwP3-yqVsySKQIb9NwY</ds:KeyName>
+          <ds:X509Data>
+            <ds:X509Certificate>
+            MIIClzCCAX8CBgF4Mbmh9DANBgkqhkiG9w0BAQsFADAPMQ0wCwYDVQQDDAR0ZXN0MB4XDTIxMDMxNDE3MTA1MloXDTMxMDMxNDE3MTIzMlowDzENMAsGA1UEAwwEdGVzdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALMWyYymX3T/pIw83x9GWNz2/6y55/4jQDAr60ba//6T3cVh9o5exQOtN8zAXqQ4Kx6HKAFL48+S1vPfDdNXqc53dorwmu247qKmdeG2/PEtG8e3nI2S+ZBKiwUbWvV4mzy9z5x151rLrawHY9oVKy9FrFkFCWaZbqMQCLg+3EuF94Lk8VPv4Ff6JKyS0j5P7nVW0zPTlHo1MGpENRsndSOdMhnmAMkJBMtueO4ZcpVxrskziiknz/qTk0tGSmq3qNcGBYLZvS0TSncHEiuuhVeSYbQ2nCEgauCiBCsoArWeb4OIq1cBm6sBviqiQMrVcxasmX/Wn8CIcakizChi1J8CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAZ7OB2q+QNPZwDvRGazvW+xEg4Fotm+XsLM0h3ekhEf91jSTyMguBe244sl6j69iMHiTvgLZ/R9iX2jkxiETUJHOEg8jUwczImSG5h1jnTaGaRZ99R2+P2/G9acmDCldLv7JUKMRaRah7DN5wcezNZHRcT5VFZfXC3adB3rz8eWKqdAED0QHKBLmCBAsbw658luIadAX4NMLq78DztPtDzDDu655kGMGsj06lgwInrK44lJx/c8oi2cgyF0GjU/ZNaqtjWLbVYUHjv/eBaiB/49Ug7F+/T7KOdjSLObbe85Y8oxJJxrbeJ9368fB/C83ND21yxQwG35z+WrkHigJUkg==</ds:X509Certificate>
+          </ds:X509Data>
+        </ds:KeyInfo>
+      </md:KeyDescriptor>
+      <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+      Location="http://localhost:9090/keycloak/auth/realms/test/protocol/saml" />
+      <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+      Location="http://localhost:9090/keycloak/auth/realms/test/protocol/saml" />
+      <md:NameIDFormat>
+      urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+      <md:NameIDFormat>
+      urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+      <md:NameIDFormat>
+      urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+      <md:NameIDFormat>
+      urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+      <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+      Location="http://localhost:9090/keycloak/auth/realms/test/protocol/saml" />
+      <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+      Location="http://localhost:9090/keycloak/auth/realms/test/protocol/saml" />
+      <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+      Location="http://localhost:9090/keycloak/auth/realms/test/protocol/saml" />
+    </md:IDPSSODescriptor>
+  </md:EntityDescriptor>
+</md:EntitiesDescriptor>

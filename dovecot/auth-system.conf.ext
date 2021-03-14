@@ -1,0 +1,15 @@
+# Authentication for system users. Included from 10-auth.conf.
+#
+# <doc/wiki/PasswordDatabase.txt>
+# <doc/wiki/UserDatabase.txt>
+
+# PAM authentication. Preferred nowadays by most systems.
+# PAM is typically used with either userdb passwd or userdb static.
+# REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
+# authentication to actually work. <doc/wiki/PasswordDatabase.PAM.txt>
+passdb {
+  driver = pam
+  # [session=yes] [setcred=yes] [failure_show_msg=yes] [max_requests=<n>]
+  # [cache_key=<key>] [<service name>]
+  #args = dovecot
+}
